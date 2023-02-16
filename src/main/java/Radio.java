@@ -1,7 +1,4 @@
 public class Radio {
-    // public int currentStation;
-    // public int currentVolume;
-
     private int minStation = 0;
     private int maxStation = 9;
     private int currentStation = minStation;
@@ -11,9 +8,6 @@ public class Radio {
     private int currentVolume;
     private int maxVolume = 100;
     private int minVolume = 0;
-
-    public Radio() {
-    }
 
     public Radio(int minStation, int maxStation, int currentStation, int stationNumber, int currentVolume, int maxVolume, int minVolume) {
         this.minStation = minStation;

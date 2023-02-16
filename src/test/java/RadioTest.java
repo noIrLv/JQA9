@@ -1,18 +1,14 @@
-/*import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.junit.jupiter.api.Assertions;
+/*import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 
 public class RadioTest {
 
-    @Test
+
+
+   @Test
     public void numberOfStations() {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio(5);
         Assertions.assertEquals(10, radio.stationNumber);
     }
 
@@ -131,7 +127,7 @@ public class RadioTest {
     public void shouldIncreaseVolume() {
         Radio radio = new Radio();
         radio.setCurrentVolume(7);
-        radio.increaseVolume();
+        radio.getMaxVolume();
 
         int expected = 8;
         int actual = radio.getCurrentVolume();
@@ -143,7 +139,7 @@ public class RadioTest {
     public void shouldDecreaseVolume() {
         Radio radio = new Radio();
         radio.setCurrentVolume(7);
-        radio.decreaseVolume();
+        radio.getMinVolume();
 
         int expected = 6;
         int actual = radio.getCurrentVolume();
@@ -155,7 +151,7 @@ public class RadioTest {
     public void shouldNotIncreaseVolume() {
         Radio radio = new Radio();
         radio.setCurrentVolume(100);
-        radio.increaseVolume();
+        radio.setMaxVolume();
 
         int expected = 100;
         int actual = radio.getCurrentVolume();
@@ -167,7 +163,7 @@ public class RadioTest {
     public void shouldNotDecreaseVolume() {
         Radio radio = new Radio();
         radio.setCurrentVolume(0);
-        radio.decreaseVolume();
+        radio.setMinVolume();
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
