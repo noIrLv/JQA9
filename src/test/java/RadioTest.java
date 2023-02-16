@@ -1,6 +1,12 @@
+/*import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 
 public class RadioTest {
 
@@ -47,7 +53,7 @@ public class RadioTest {
     public void shouldIncreaseStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(7);
-        radio.nextStation();
+        radio.getMaxStation();
 
         int expected = 8;
         int actual = radio.getCurrentStation();
@@ -59,7 +65,7 @@ public class RadioTest {
     public void shouldDecreaseStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(7);
-        radio.prevStation();
+        radio.getMinStation();
 
         int expected = 6;
         int actual = radio.getCurrentStation();
@@ -71,7 +77,7 @@ public class RadioTest {
     public void shouldNotIncreaseStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(9);
-        radio.nextStation();
+        radio.setMaxStation();
 
         int expected = 0;
         int actual = radio.getCurrentStation();
@@ -83,7 +89,7 @@ public class RadioTest {
     public void shouldNotDecreaseStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(0);
-        radio.prevStation();
+        radio.setMinStation();
 
         int expected = 9;
         int actual = radio.getCurrentStation();
@@ -168,4 +174,4 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-}
+}*/

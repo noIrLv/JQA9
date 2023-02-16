@@ -1,11 +1,3 @@
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
-
 public class Radio {
     // public int currentStation;
     // public int currentVolume;
