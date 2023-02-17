@@ -4,7 +4,7 @@ import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @Data
-@NoArgsConstructor
+
 public class Radio {
     private int minStation = 0;
     private int maxStation = 9;
