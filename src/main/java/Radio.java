@@ -1,3 +1,10 @@
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
 public class Radio {
     private int minStation = 0;
     private int maxStation = 9;
@@ -9,17 +16,9 @@ public class Radio {
     private int maxVolume = 100;
     private int minVolume = 0;
 
-    public Radio(int minStation, int maxStation, int currentStation, int stationNumber, int currentVolume, int maxVolume, int minVolume) {
-        this.minStation = minStation;
-        this.maxStation = maxStation;
-        this.currentStation = currentStation;
-        this.stationNumber = stationNumber;
-        this.currentVolume = currentVolume;
-        this.maxVolume = maxVolume;
-        this.minVolume = minVolume;
-    }
 
-    public int getMinStation() {
+
+  /*  public int getMinStation() {
         return minStation;
     }
 
@@ -73,7 +72,7 @@ public class Radio {
 
     public void setMinVolume(int minVolume) {
         this.minVolume = minVolume;
-    }
+    } */
     /*        return currentVolume;
     }
 
