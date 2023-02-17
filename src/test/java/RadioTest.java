@@ -3,17 +3,71 @@ import org.junit.jupiter.api.Test;
 
 
 public class RadioTest {
+
     @Test
-    public void testCurrentStation(){
-        Radio radio = new Radio(0,9,5,7,50,100,0);
-        Assertions.assertEquals(7,radio.stationNumber);
+    public void setRadioStation() {
+        Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
+        radio.setStationNumber(5);
+        Assertions.assertEquals(5, radio.stationNumber);
+    }
+
+    @Test
+    public void setMinStation() {
+        Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
+        radio.setMinStation(0);
+        Assertions.assertEquals(0, radio.getMinStation());
+
+    }
+    @Test
+    public void setMaxStation(){
+        Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
+        radio.setMaxStation(9);
+        Assertions.assertEquals(9,radio.getMaxStation());
+    }
+    @Test
+    public void setCurrentStation(){
+        Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
+        radio.setCurrentStation(6);
+        Assertions.assertEquals(6,radio.getCurrentStation());
+    }
+    @Test
+    public void shouldCurrentVolume(){
+        Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
+        radio.setCurrentVolume(50);
+        Assertions.assertEquals(50,radio.getCurrentVolume());
+    }
+
+    @Test
+    public void setMaxVolume(){
+        Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
+        radio.setMaxVolume(100);
+        Assertions.assertEquals(100,radio.getMaxVolume());
+    }
+
+    @Test
+    public void setMinVolume(){
+        Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
+        radio.setMinVolume(0);
+        Assertions.assertEquals(0,radio.getMinVolume());
     }
 
 
 
-  /* @Test
+
+
+
+
+
+
+
+
+
+    }
+
+
+  /*  @Test
     public void numberOfStations() {
-        Radio radio = new Radio(5);
+        Radio radio = new Radio()
         Assertions.assertEquals(10, radio.stationNumber);
     }
 
@@ -76,7 +130,7 @@ public class RadioTest {
 
     @Test
     public void shouldNotIncreaseStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio()
         radio.setCurrentStation(9);
         radio.setMaxStation();
 
@@ -175,4 +229,3 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }*/
-}
