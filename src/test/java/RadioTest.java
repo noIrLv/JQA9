@@ -5,10 +5,16 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
 
     @Test
+    public void stationNumber() {
+        Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
+
+    }
+
+    @Test
     public void setRadioStation() {
         Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
         radio.setStationNumber(5);
-        Assertions.assertEquals(5, radio.stationNumber);
+        Assertions.assertEquals(5, radio.getStationNumber());
     }
 
     @Test
@@ -18,51 +24,44 @@ public class RadioTest {
         Assertions.assertEquals(0, radio.getMinStation());
 
     }
+
     @Test
-    public void setMaxStation(){
+    public void setMaxStation() {
         Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
         radio.setMaxStation(9);
-        Assertions.assertEquals(9,radio.getMaxStation());
+        Assertions.assertEquals(9, radio.getMaxStation());
     }
+
     @Test
-    public void setCurrentStation(){
+    public void setCurrentStation() {
         Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
         radio.setCurrentStation(6);
-        Assertions.assertEquals(6,radio.getCurrentStation());
+        Assertions.assertEquals(6, radio.getCurrentStation());
     }
+
     @Test
-    public void shouldCurrentVolume(){
+    public void shouldCurrentVolume() {
         Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
         radio.setCurrentVolume(50);
-        Assertions.assertEquals(50,radio.getCurrentVolume());
+        Assertions.assertEquals(50, radio.getCurrentVolume());
     }
 
     @Test
-    public void setMaxVolume(){
+    public void setMaxVolume() {
         Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
         radio.setMaxVolume(100);
-        Assertions.assertEquals(100,radio.getMaxVolume());
+        Assertions.assertEquals(100, radio.getMaxVolume());
     }
 
     @Test
-    public void setMinVolume(){
+    public void setMinVolume() {
         Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
         radio.setMinVolume(0);
-        Assertions.assertEquals(0,radio.getMinVolume());
+        Assertions.assertEquals(0, radio.getMinVolume());
     }
 
 
-
-
-
-
-
-
-
-
-
-
-    }
+}
 
 
   /*  @Test

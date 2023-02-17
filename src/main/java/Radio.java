@@ -18,9 +18,7 @@ public class Radio {
 
 
 
-
-
-  /*  public Radio(int stationNumber) {
+/*  public Radio(int stationNumber) {
         this.stationNumber = maxStation + 1;
     }
 
