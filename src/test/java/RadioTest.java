@@ -4,6 +4,25 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
     @Test
+    public void initialConrsructions() {
+        int expectMinStation = 0;
+        int expectMaxStation = 9;
+        int expectCurrentStation = 5;
+        int expectStationNumber = 4;
+        int expectMinVolume = 0;
+        int expectMaxVolume = 100;
+        int expectCurrentVolume = 55;
+        Radio radio = new Radio(expectMinStation, expectMaxStation, expectCurrentStation, expectStationNumber, expectCurrentVolume, expectMaxVolume, expectMinVolume);
+        Assertions.assertEquals(radio.getMinStation(), expectMinStation);
+        Assertions.assertEquals(radio.getMaxStation(), expectMaxStation);
+        Assertions.assertEquals(radio.getCurrentStation(), expectCurrentStation);
+        Assertions.assertEquals(radio.getStationNumber(), expectStationNumber);
+        Assertions.assertEquals(radio.getMinVolume(), expectMinVolume);
+        Assertions.assertEquals(radio.getMaxVolume(), expectMaxVolume);
+        Assertions.assertEquals(radio.getCurrentVolume(), expectCurrentVolume);
+    }
+
+    @Test
     public void stationNumber() {
         Radio radio = new Radio(0, 9, 6, 2, 50, 100, 0);
 
@@ -58,7 +77,6 @@ public class RadioTest {
         radio.setMinVolume(0);
         Assertions.assertEquals(0, radio.getMinVolume());
     }
-
 
 
     @Test
